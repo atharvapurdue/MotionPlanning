@@ -21,6 +21,7 @@ Whenever an instance is created, `__init__()` function is called.`__init()` func
 >>- &nbsp;waypoints
 >>- &nbsp;in_mission
 >>- &nbsp;check_states
+
 Also, callback functions are registered such as:-
 >>- &nbsp;position
 >>- &nbsp;velocity
