@@ -88,6 +88,13 @@ The `plan_path()` function performs the following tasks :
 - &nbsp; Sets the `TARGET_ALTITUDE` & `SAFETY_DISTANCE` parameters
 - &nbsp; Sets the `target_position` altitude to `TARGET_ALTITUDE`
 
+The next part of the code is not included in the starter code.
+
+`colliders.csv` is opened and the `lat0` and `long0` values are acquired.
+
+Then the home position is set to `lat0` and `long0`
+
+
 ![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m5.png?raw=true "m5")
 
 Function `TAKEOFF` : When the flight state is TAKEOFF the function checks if the UAV is within 95 % of the target altitude. When so, it calls the waypoint_transition() function.
