@@ -11,6 +11,16 @@
   TAKEOFF : When the flight state is TAKEOFF the function checks if the UAV is within 95 % of the target altitude. When so, it calls the     waypoint_transition() function.
 
 ![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m3.png?raw=true "m3")
+####
+    The state_callback() function is called periodically in a heartbeat fashion and is responsible for advancing the flight status of       the UAV. The function responds based on the current flight status as below:
+
+    MANUAL : When the flight state is MANUAL the function calls the arming_transition() function to proceed to arm and gain control of       the UAV.
+
+    ARMING : When the flight state is ARMING and the UAV is armed, the function calls on the path_plan() function to proceed to plan a       path for the UAV to follow.
+
+    PLANNING : When the flight state is PLANNING the function calls the takeoff_transition() function to make the UAV takeoff to target     altitude.
+
+    DISARMING : When the flight state is DISARMING and the UAV is not armed and not in guided mode, the function calls the                   manual_transition() function to disarm the UAV
 #### 
   WAYPOINT : When the flight state is WAYPOINT the function checks if the UAV is within 1m of the target waypoint.If that is the case and   there are no more waypoints,it calls the landing_transition() function.If there are more waypoints left, then the waypoint_transition()   function is called again to proceed to the next waypoint.
   
