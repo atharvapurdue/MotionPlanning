@@ -3,7 +3,7 @@
       1. [Click here for explaination of motion_planning.py](https://github.com/sparklytopaz/MotionPlanning/blob/master/motion_planning.md)
       2. [Click here for explaination of  planning_utils.py](https://github.com/sparklytopaz/MotionPlanning/blob/master/planningalgo.md)
       
-# **NOTE TO REEVIEWER**
+# **NOTE TO REVIEWER**
 
 The program takes a long time to run. Please close the matplotlib img to proceed with further execution of the code.
 
