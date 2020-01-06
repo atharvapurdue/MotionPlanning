@@ -3,13 +3,13 @@
 ![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m1.JPG?raw=true "m1")
 ### *Here, all the necessary libraries are imported* 
 > 'States' : defines the 7 states that a Unmanned Aerial Vehicle can take and they are assigned values automatically.
-    1. MANUAL 
-    2. ARMING
-    3. TAKEOFF
-    4. WAYPOINT
-    5. LANDING
-    6. DISARMING
-    7. PLANNING
+- &nbsp;1. MANUAL 
+- &nbsp;2. ARMING
+- &nbsp;3. TAKEOFF
+- &nbsp;4. WAYPOINT
+- &nbsp;5. LANDING
+- &nbsp;6. DISARMING
+- &nbsp;7. PLANNING
 ![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m2.JPG?raw=true "m2")
 ### *The class **MotionPlanning** is a child class of udacidrone drone class*
 ### Whenever an instance is created, class variables like target_position,waypoints  are initialized.
