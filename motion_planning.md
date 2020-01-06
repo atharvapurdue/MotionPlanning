@@ -107,7 +107,13 @@ We define a grid and starting point of grid.
 
 We set the goal lat long coordinates.
 
+Then we call the a_star function to find a suitable path from start point to end point.
+
 ![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m6.png?raw=true "m6")
+
+After recieving the path, we prune the path to minimize waypoints.
+
+Then we use matplotlib to visualize the pruned path.
 
 Function `TAKEOFF` : When the flight state is TAKEOFF the function checks if the UAV is within 95 % of the target altitude. When so, it calls the waypoint_transition() function.
     
