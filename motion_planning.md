@@ -73,14 +73,31 @@ The `disarming_transition()` function performs the following tasks :
 
 ![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m4.png?raw=true "m4")
 
+The `manual_transition()` function performs the following tasks :
+
+- &nbsp; Changes the flight state to **MANUAL**
+- &nbsp; Stops the drone
+- &nbsp; Sets the `in_mission` variable to False
+
+![waypoint transition](./misc/mp_send_waypoints.PNG)
+
+The `send_waypoint()` function sends the waypoints to the FCND Simulator for visualization purposes.
+
+![plan path](./misc/mp_plan_path.PNG)
+
+The `plan_path()` function performs the following tasks :
+
+- &nbsp; Changes the flight state to **PLANNING**
+- &nbsp; Sets the `TARGET_ALTITUDE` & `SAFETY_DISTANCE` parameters
+- &nbsp; Sets the `target_position` altitude to `TARGET_ALTITUDE`
+
+![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m5.png?raw=true "m5")
+
 Function `TAKEOFF` : When the flight state is TAKEOFF the function checks if the UAV is within 95 % of the target altitude. When so, it calls the waypoint_transition() function.
     
 Function `WAYPOINT` : When the flight state is WAYPOINT the function checks if the UAV is within 1m of the target waypoint.If that is the case and  there are no more waypoints,it calls the landing_transition() function.If there are more waypoints left, then the waypoint_transition()  function is called again to proceed to the next waypoint.
   
 Function `VELOCITY` : This is the velocity callback function which is triggered whenever there is a change in the velocity of the UAV.This function responds only when the UAV is in the LANDING state and checks if the UAV altitude is within 0.1m of the global home position altitude. If so and the UAV is within 0.01m of the ground, the function calls the disarming_transition() function.
-
-![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m5.png?raw=true "m5")
-**hi**
 ![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m6.png?raw=true "m6")
 **hi**
 ![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m7.png?raw=true "m7")
