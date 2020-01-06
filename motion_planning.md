@@ -1,7 +1,7 @@
 # CODE EXPLAINATION (STARTER CODE + MY CODE)
 ## Below are the sreenshots of the code and a brief explaination  
 ![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m1.JPG?raw=true "m1")
-### *Here, all the necessary libraries are imported* 
+*Here, all the necessary libraries are imported* 
 > 'States' : defines the 7 states that a Unmanned Aerial Vehicle can take and they are assigned values automatically.
 - &nbsp;1. MANUAL 
 - &nbsp;2. ARMING
@@ -11,11 +11,15 @@
 - &nbsp;6. DISARMING
 - &nbsp;7. PLANNING
 ![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m2.JPG?raw=true "m2")
-### *The class **MotionPlanning** is a child class of udacidrone drone class*
-### Whenever an instance is created, class variables like target_position,waypoints  are initialized.
-### Also, callback functions like position,velocity and state are registered.
-#### The local_position_callback is triggered everytime there is a change in the position of the UAV. The function response depends on the flight_state variable :
-  TAKEOFF : When the flight state is TAKEOFF the function checks if the UAV is within 95 % of the target altitude. When so, it calls the     waypoint_transition() function.
+> 'MotionPlanning' is a child class of udacidrone drone class.
+Whenever an instance is created, class variables like target_position,waypoints  are initialized.
+Also, callback functions like :-
+- &nbsp;position
+- &nbsp;velocity
+- &nbsp;state 
+are registered
+The 'local_position_callback' is triggered everytime there is a change in the position of the UAV. The function response depends on the flight_state variable :
+  'TAKEOFF' : When the flight state is TAKEOFF the function checks if the UAV is within 95 % of the target altitude. When so, it calls the     waypoint_transition() function.
 
 ![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m3.png?raw=true "m3")
 ####
