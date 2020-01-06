@@ -8,14 +8,15 @@
 ### Whenever an instance is created, class variables like target_position,waypoints  are initialized.
 ### Also, callback functions like position,velocity and state are registered.
 #### The local_position_callback is triggered everytime there is a change in the position of the UAV. The function response depends on the flight_state variable :
+  TAKEOFF : When the flight state is TAKEOFF the function checks if the UAV is within 95 % of the target altitude. When so, it calls the     waypoint_transition() function.
 
-  TAKEOFF : When the flight state is TAKEOFF the function checks if the UAV is within 95 %             of the target altitude. When so, it calls the waypoint_transition() function.
-
-  WAYPOINT : When the flight state is WAYPOINT the function checks if the UAV is within 1m              of the target waypoint. If that is the case and there are no more waypoints,                it calls the landing_transition() function. If there are more waypoints left ,              then the waypoint_transition() function is called again to proceed to the next              waypoint.
 ![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m3.png?raw=true "m3")
-**hi**
+#### 
+  WAYPOINT : When the flight state is WAYPOINT the function checks if the UAV is within 1m of the target waypoint.If that is the case and   there are no more waypoints,it calls the landing_transition() function.If there are more waypoints left, then the waypoint_transition()   function is called again to proceed to the next waypoint.
+  
+  VELOCITY : This is the velocity callback function which is triggered whenever there is a change in the velocity of the UAV.This           function responds only when the UAV is in the LANDING state and checks if the UAV altitude is within 0.1m of the global home position     altitude. If so and the UAV is within 0.01m of the ground, the function calls the disarming_transition() function.
 ![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m4.png?raw=true "m4")
-**hi**
+
 ![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m5.png?raw=true "m5")
 **hi**
 ![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m6.png?raw=true "m6")
