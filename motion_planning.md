@@ -79,11 +79,7 @@ The `manual_transition()` function performs the following tasks :
 - &nbsp; Stops the drone
 - &nbsp; Sets the `in_mission` variable to False
 
-![waypoint transition](./misc/mp_send_waypoints.PNG)
-
 The `send_waypoint()` function sends the waypoints to the FCND Simulator for visualization purposes.
-
-![plan path](./misc/mp_plan_path.PNG)
 
 The `plan_path()` function performs the following tasks :
 
