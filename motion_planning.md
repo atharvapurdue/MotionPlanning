@@ -21,10 +21,11 @@
     PLANNING : When the flight state is PLANNING the function calls the takeoff_transition() function to make the UAV takeoff to target     altitude.
 
     DISARMING : When the flight state is DISARMING and the UAV is not armed and not in guided mode, the function calls the                   manual_transition() function to disarm the UAV
-#### 
-  WAYPOINT : When the flight state is WAYPOINT the function checks if the UAV is within 1m of the target waypoint.If that is the case and   there are no more waypoints,it calls the landing_transition() function.If there are more waypoints left, then the waypoint_transition()   function is called again to proceed to the next waypoint.
+    
+WAYPOINT : When the flight state is WAYPOINT the function checks if the UAV is within 1m of the target waypoint.If that is the case and  there are no more waypoints,it calls the landing_transition() function.If there are more waypoints left, then the waypoint_transition()  function is called again to proceed to the next waypoint.
   
-  VELOCITY : This is the velocity callback function which is triggered whenever there is a change in the velocity of the UAV.This           function responds only when the UAV is in the LANDING state and checks if the UAV altitude is within 0.1m of the global home position     altitude. If so and the UAV is within 0.01m of the ground, the function calls the disarming_transition() function.
+VELOCITY : This is the velocity callback function which is triggered whenever there is a change in the velocity of the UAV.This          function responds only when the UAV is in the LANDING state and checks if the UAV altitude is within 0.1m of the global home position    altitude. If so and the UAV is within 0.01m of the ground, the function calls the disarming_transition() function.
+
 ![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m4.png?raw=true "m4")
 
 ![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m5.png?raw=true "m5")
