@@ -97,11 +97,22 @@ Then the home position is set to `lat0` and `long0`
 
 ![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m5.png?raw=true "m5")
 
+We take the current global position then.
+
+We use NE coordinate system and use the predefined `global_to_local` for that purpose.
+
+We again open `colliders.csv` to read obstacle data.
+
+We define a grid and starting point of grid.
+
+We set the goal lat long coordinates.
+
+![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m6.png?raw=true "m6")
+
 Function `TAKEOFF` : When the flight state is TAKEOFF the function checks if the UAV is within 95 % of the target altitude. When so, it calls the waypoint_transition() function.
     
 Function `WAYPOINT` : When the flight state is WAYPOINT the function checks if the UAV is within 1m of the target waypoint.If that is the case and  there are no more waypoints,it calls the landing_transition() function.If there are more waypoints left, then the waypoint_transition()  function is called again to proceed to the next waypoint.
   
 Function `VELOCITY` : This is the velocity callback function which is triggered whenever there is a change in the velocity of the UAV.This function responds only when the UAV is in the LANDING state and checks if the UAV altitude is within 0.1m of the global home position altitude. If so and the UAV is within 0.01m of the ground, the function calls the disarming_transition() function.
-![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m6.png?raw=true "m6")
-**hi**
+
 ![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m7.png?raw=true "m7")
