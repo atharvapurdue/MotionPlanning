@@ -23,6 +23,7 @@ Also, callback functions are registered such as:-
 >>- &nbsp;state 
 
 Function`local_position_callback` is triggered everytime there is a change in the position of the UAV. The function response depends on the flight_state variable.
+
 Function `velocity_callback()` is a callback function which is triggered whenever there is a change in the velocity of the UAV.This function responds only when the UAV is in the LANDING state and checks if the UAV altitude is within 0.1m of the global home position    altitude. If so and the UAV is within 0.01m of the ground, the function calls the disarming_transition() function.
 
 
