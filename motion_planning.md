@@ -119,4 +119,4 @@ After visualZING the path, we send the waypoints to the simulator.
 
 ![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m7.png?raw=true "m7")
 
-The `__main__` function is called just after we hit enter in the terminal window while execting this program. `argparse` is used to attach additional information to our command such as portnumber. Then udacity api are called which use Mavlink protocal at their core to create a SITL (Software in loop) which essentially is the udacity unity simulator.
+The `__main__` function is called just after we hit enter in the terminal window while execting this program, `argparse` is used to attach additional information to our command such as portnumber. Then udacity api are called which use Mavlink protocal at their core to create a SITL (Software in loop) which essentially is the udacity unity simulator.
