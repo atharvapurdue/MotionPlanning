@@ -1,6 +1,8 @@
 # CODE EXPLAINATION (STARTER CODE + MY CODE)
 ## Below are the sreenshots of the code and a brief explaination  
+
 ![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m1.JPG?raw=true "m1")
+
 *Here, all the necessary libraries are imported* 
 Class `States` : defines the 7 states that a Unmanned Aerial Vehicle can take and they are assigned values automatically.
 >>- &nbsp;1. MANUAL 
@@ -10,7 +12,9 @@ Class `States` : defines the 7 states that a Unmanned Aerial Vehicle can take an
 >>- &nbsp;5. LANDING
 >>- &nbsp;6. DISARMING
 >>- &nbsp;7. PLANNING
+
 ![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m2.JPG?raw=true "m2")
+
 Class `MotionPlanning` is a child class of udacidrone drone class.
 Whenever an instance is created, `__init__()` function is called.`__init()` function initialises the following variables:-
 >>- &nbsp;target_position
@@ -36,11 +40,11 @@ The `state_callback` function is called periodically in a heartbeat fashion and 
 >>PLANNING : When the flight state is PLANNING the function calls the takeoff_transition() function to make the UAV takeoff to target altitude.
 >>DISARMING : When the flight state is DISARMING and the UAV is not armed and not in guided mode, the function calls the manual_transition() function to disarm the UAV
     
- Class `TAKEOFF` : When the flight state is TAKEOFF the function checks if the UAV is within 95 % of the target altitude. When so, it calls the waypoint_transition() function.
+Function `TAKEOFF` : When the flight state is TAKEOFF the function checks if the UAV is within 95 % of the target altitude. When so, it calls the waypoint_transition() function.
     
-WAYPOINT : When the flight state is WAYPOINT the function checks if the UAV is within 1m of the target waypoint.If that is the case and  there are no more waypoints,it calls the landing_transition() function.If there are more waypoints left, then the waypoint_transition()  function is called again to proceed to the next waypoint.
+Function `WAYPOINT` : When the flight state is WAYPOINT the function checks if the UAV is within 1m of the target waypoint.If that is the case and  there are no more waypoints,it calls the landing_transition() function.If there are more waypoints left, then the waypoint_transition()  function is called again to proceed to the next waypoint.
   
-VELOCITY : This is the velocity callback function which is triggered whenever there is a change in the velocity of the UAV.This          function responds only when the UAV is in the LANDING state and checks if the UAV altitude is within 0.1m of the global home position    altitude. If so and the UAV is within 0.01m of the ground, the function calls the disarming_transition() function.
+Function `VELOCITY` : This is the velocity callback function which is triggered whenever there is a change in the velocity of the UAV.This function responds only when the UAV is in the LANDING state and checks if the UAV altitude is within 0.1m of the global home position altitude. If so and the UAV is within 0.01m of the ground, the function calls the disarming_transition() function.
 
 ![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m4.png?raw=true "m4")
 
