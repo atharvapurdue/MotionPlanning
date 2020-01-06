@@ -1,4 +1,5 @@
-**hi**
+#CODE EXPLAINATION (STARTER CODE + MY CODE)
+##Below are the sreenshots of the code and a brief explaination  
 ![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m1.JPG?raw=true "m1")
 **hi**
 ![Alt text](https://github.com/sparklytopaz/MotionPlanning/blob/master/m2.JPG?raw=true "m2")
