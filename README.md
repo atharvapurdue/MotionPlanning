@@ -13,16 +13,17 @@
 5. Use a collinearity test or ray tracing method (like Bresenham) to remove unnecessary waypoints.
 6. Return waypoints in local ECEF coordinates (format for self.all_waypoints is [N, E, altitude, heading], where the drone’s start location corresponds to [0, 0, 0, 0].
 
-**Demo** 
-***Input***
+**Demo**
 
-![Satellie Image](satellie.png)
+**Input**
 
-***Pruned Path***
+![Satellie Image](satellite.png)
+
+**Pruned Path**
 
 ![Path of Drone](path.png)
 
-***Demo on simulator***
+**Demo on simulator**
 
 ![Drone Path Following](demo.gif)
 
