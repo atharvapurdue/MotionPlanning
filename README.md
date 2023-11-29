@@ -4,7 +4,7 @@
       2. [Click here for explaination of  planning_utils.py](https://github.com/sparklytopaz/MotionPlanning/blob/master/planningalgo.md)
   
 
-** Things done in this Project ** 
+**Things done in this Project** 
 
 1. Load the 2.5D map in the colliders.csv file describing the environment.
 2. Discretize the environment into a grid or graph representation.
